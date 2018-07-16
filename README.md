@@ -1,4 +1,4 @@
-g# Creando una Red Social
+# Creando una Red Social
 
 
 ## Presentación de Temática.
