@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form with Materializecss</title>
+</head>
+
+<body>
+  <html>
+
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  </head>
+
+  <body>
+    <div id="signIn">
+      <div class="section"></div>
+      <main>
+        <center>
+          <img class="responsive-img" style="width: 250px;" id="logo" src="./logo.jpg" />
+          <div class="section"></div>
+          <h5 class="indigo-text">Ingresa</h5>
+          <div class="section"></div>
+          <div class="container">
+            <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+              <form class="col s12" method="post">
+                <div class='row'>
+                  <div class='col s12'>
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='input-field col s12'>
+                    <input class='validate' type='email' name='email' id='email' />
+                    <label for='email'>Ingresa tu email</label>
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='input-field col s12'>
+                    <input class='validate' type='password' name='password' id='password' />
+                    <label for='password'>Ingresa tu contraseña</label>
+                  </div>
+                  <a href="#" class="fb btn" id="btn-login-facebook">
+                    <i class="fa fa-facebook fa-fw"></i> Facebook
+                  </a>
+
+                  <a href="#" class="google btn" id="btn-login-google">
+                    <i class="fa fa-google fa-fw"></i> Google+
+                  </a>
+                  <label style='float: right;'>
+                    <a class='pink-text' href='#!'>
+                      <b>Olvidaste tu contraseña?</b>
+                    </a>
+                  </label>
+                  <div id="container-text"></div>
+                  <div id="status"></div>
+                </div>
+                <br />
+                <center>
+                  <div class='row'>
+                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo' id="btn-login">ingresar</button>
+                  </div>
+                </center>
+              </form>
+            </div>
+          </div>
+          <a href="#" id="registerLink">Crea una cuenta</a>
+        </center>
+        <div class="section"></div>
+        <div class="section"></div>
+      </main>
+    </div>
+    <div id="signUp">
+      <div class="section"></div>
+      <main>
+        <center>
+          <img class="responsive-img" style="width: 250px;" id="logo" src="logo.jpg" />
+          <div class="section"></div>
+
+          <h5 class="indigo-text">Regístrate</h5>
+          <div class="section"></div>
+
+          <div class="container">
+            <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+              <form class="col s12" method="post">
+                <div class='row'>
+                  <div class='col s12'>
+                  </div>
+                </div>
+
+                <div class='row'>
+                  <div class='input-field col s12'>
+                    <input class='validate' type='email' name='email' id='emailR' />
+                    <label for='email'>Ingresa tu email</label>
+                  </div>
+                </div>
+
+                <div class='row'>
+                  <div class='input-field col s12'>
+                    <input class='validate' type='password' name='password' id='passwordR' />
+                    <label for='password'>Crea tu contraseña</label>
+                  </div>
+
+                  <input type="button" id="return" value="volver al login">
+                  <div id="container-sigup"></div>
+                </div>
+
+                <br />
+                <center>
+                  <div class='row'>
+                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo' id="btn-signup">Regístrate</button>
+                  </div>
+                </center>
+              </form>
+            </div>
+          </div>
+        </center>
+
+        <div class="section"></div>
+        <div class="section"></div>
+      </main>
+    </div>
+    <div id="wall" class="wrapper">
+      <div id="logout">
+
+        <p id="user_name"></p>
+
+        <input type="button" id="sign-off" value="Cerrar sesión">
+
+      </div>
+
+      <div class="maincontent">
+
+        <div class="logo">
+          <!--<img src="logo.jpg" alt="logo">-->
+        </div>
+
+        <div class="row">
+          <div class="tab_container">
+            <div id="tab1" class="tab_content">
+              <div class="col">
+
+                <div class="post">
+                  <h3>Post</h3>
+                  <div id="container-post" class="hiden">
+                    <textarea name="Publicacòn" id="post" cols="30" rows="10"></textarea>
+                    <input type="button" value="Publicar" id="btn-post">
+                  </div>
+                  <div id="posts" class="hiden">
+                  </div>
+                  <!--<h3>
+                    <a href="#">La importancia de los carbohidratos</a>
+                  </h3>
+                  <span class="postInfo">por
+                    <a href="#">Andrea Monroy</a> Julio 2018</span>
+                  <p></p>
+                  <a class="more" href="#">Ver más</a>
+                  <span class="line"></span>
+                  <a href="#">12 Likes</a>
+                  <a href="#"> Compartir</a>
+                  <span class="line"></span>
+                </div>
+                End Blog Post-->
+
+                </div>
+                <!--End Tab 1-->
+              </div>
+            </div>
+
+            <div id="tab2" class="tab_content">
+
+              <!--<h3>Acerca de</h3>
+            <p>
+              <strong>App creada en Laboratoria :)</strong>
+            </p>-->
+            </div>
+            <!--End Tab 2 -->
+
+            <div id="tab3" class="tab_content">
+            </div>
+            <!--End Tab 3 -->
+
+            <div id="tab4" class="tab_content">
+            </div>
+            <!--End Tab 4 -->
+
+          </div>
+          <!--End Tab Container -->
+
+        </div>
+        <!--End Main Content-->
+
+        <div class="sidebar">
+        </div>
+        <!--End Sidebar-->
+      </div>
+      <!--End Wrapper -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
+
+  </html>
+</body>
+
+</html>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  const config = {
+    apiKey: "AIzaSyAB7icNPz-tO88wVkgcCeNmlz9H1xd8OTU",
+    authDomain: "login-e3b98.firebaseapp.com",
+    databaseURL: "https://login-e3b98.firebaseio.com",
+    projectId: "login-e3b98",
+    storageBucket: "login-e3b98.appspot.com",
+    messagingSenderId: "857338189328"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="login.js"></script>
+</body>
+
+</html>
