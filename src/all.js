@@ -204,7 +204,7 @@ $('#sign-off').click(() => {
       getID('photo').innerHTML = '';
 
     })
-    .catch((error) => {})
+    .catch((error) => { })
 });
 
 
