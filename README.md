@@ -1,42 +1,169 @@
-g# Creando una Red Social
+# Creando una Red Social: Vitality Health Life
+
+## Introducción.
+
+Una emprendedora nos ha encargado crear una red social. No nos da mucho detalle sobre qué tipo de red social quiere, sólo nos dice que creemos la mejor que podamos, y que luego la convenzamos de lanzarla al mercado. Luego de señalarnos algunos temas de interes; como grupo decidimos enofcarnos en: **Alimentación y Salud**; ya que son tópicos cruciales en la vida diaria de las personas que desean mejorar o sostener un estilo de vida saludable.
+
+## Proceso de Planeamiento.
+
+La planificación del proyecto se respaldó en un **Product Backlog** de Scrum escritos como **Historias de Usuarios** para enlistar los requerimientos, necesidades y prioridades del cliente del nuevo producto en creación. 
+
+![Product Backlog](http://subirimagen.me/uploads/20180729132557.jpg)
 
 
-## Presentación de Temática.
+## UX Designer.
 
-Está red social en proceso de ideación esta orientado a tema de Alimentación para Deportistas que buscan un estilo de vida saludable. 
+Para diseñar nuestro nuevo producto nos respaldamos en las metodologías que ofrece la **Experiencia de Usuario (UX)**. Esto implica tomar en cuenta muchos aspectos antes de comenzar a diseñar un producto digital. Que revisaremos a continuación:
 
-Como objetivos principales consideramos:
- 
-* Conocer como se comunican (que medios o redes sociales utilizan)
-* Conocer sus frustraciones, motivaciones e intereses.
+* Herramientas que utilizamos para conocer el mercado de las redes sociales: 
 
-Decidimos empezar a conocer el mercado digital con una lluvia de ideas  de lo que ibamos recopilando a nivel de investigación por internet con el fin de conocer a nuestros competidores; y elaborar un BenchMark potente que nos brinde recursos cuándo iniciemos la definición de propuesta de valor.
+  - Iniciamos con una lluvia de ideas  de lo que ibamos recopilando a nivel de investigación por internet; con el fin de conocer a nuestros competidores; y elaborar un **Benchmark** potente que nos brinde recursos cuándo iniciemos la definición de propuesta de valor para clientes.
 
-![Login](http://subirimagen.me/uploads/20180711090526.57)
+  ![Lluvia de Ideas](http://subirimagen.me/uploads/20180730032745.jpg)
+
+  - Cuáles son los elementos básicos que tiene una red social: Recopilamos una selección redes sociales como referencia (Facebook, Instagram y Twitter) y a su vez web sites con la temática principal ya que actualmente en el mercado no existe una red social orientado exclusivamente a generar una comunidad con el fin de alimnetación y vida saludable. En estos websites se fomentan foros y grupos en común con preguntas o algún tema de interes en otros se comparten articulos, recetas y tips. Seleccionamos algunos con mayor número de visitas y actualizaciones en la página.
+
+  * "Come con Salud": Es un portal de Nutrición, vida sana y deporte. Fue creado debido al creciente interés y la gran demanda surgida en los últimos tiempos acerca de estos temas.En este portal se encuentra artículos sobre como seguir una alimentación equilibrada para lograr un óptimo estado físico y una mejor calidad de vida, asi como tambien puedes formar parte de grupos con intereses en común.
+
+  * "Alimentación sana.org":Comparte articulos y de alimentación nutrición con dietas; está conectados con cuentas en las siguientes redes sociales para que puedan ser compartidos: Facebook, Twitter, Google+.
+
+    ![Benchmark](http://subirimagen.me/uploads/20180730032545.png)
+
+* Definición del producto 
+
+Es una red social creada para los “millennials” que se interesan por conseguir o mantener un estilo de vida saludable a través de una buena alimentación; este público objetivo se caracteriza por estar conectado gran parte del día a las redes social y buscar exclusividad; es por ello que con el producto  podrán conocer e interactuar con personas que tienen intereses en común, revisar contenidos de utilidad, dar likes, comentar y postear con la comunidad.
+
+
+* Acerca de los Usuarios
+
+  - Cuál es el cliente que deseo atraer: El producto estará orientado principalmente a los “Millennials”; personas nacidas entre 1980 y el 2000, ya que según estudios realizados son un grupo de consumidores marcado por tendencias y expectativas.
+   
+  - ¿Qué le gusta?: Son un tipo de clientes exigentes ya que tienen necesidades particulares y aspiraciones. Por esta razón, se están convirtiendo en una de las mayores generaciones de consumidores y representan una fuerza importante para los cambios que surjan en los mercados.
+
+  - ¿Cuáles son sus hábitos?: Son la primera generación digital por lo tanto dominan la tecnología y están permanentemente conectados; utilizan múltiples canales y dispositivos digitales para sus actividades. Se podría afirmar que su día a día inicia con el uso del smartphone y su principal entrada a la Internet es una pantalla móvil; ya que dedican una mayor parte de su tiempo en redes sociales que en otros medios tradicionales.
+
+* Cómo descubriste las necesidades de los usuarios
+
+  - Información por internet: Existe demanda por parte un público interesado por mejorar su estilo de vida que visita páginas relacionadas, crea grupos en redes sociales, comparte articulos y fomenta debates en foros.  
+
+  - Entevistas: La guía de entrevista tuvo como objetivos principales conocer cómo se comunicas y que los motiva o interesa de una red social que se ajuste a sus intereses.
+
+* Qué problema resuelve el producto para estos usuarios.
+
+Exclusividad de una nueva red social y acceso desde sus móviles a información útil diaria sobre alimentación y salud para reforzar su estilo de vida compartido con otras personas del mismo interes para que interactuen en un mismo espacio y sean los verdaderos protagonistas. 
+
+*	Cuáles son los objetivos de estos usuarios en relación con el producto 
+
+Contar con una red social exclusiva donde se pueda compartir información relevante acerca de alimentación y salud que permita ver en línea ultimas actualizaciones desde su móvil.
+
+* Cuáles son las principales funcionalidades del producto y cuál es su prioridad.
+Las funcionalidades están relacionadas a otras redes sociales populares que permiten Iniciar Sesión o Registro usando sus mismas cuentas y la opción de un Nuevo registro es caso requiera una nueva cuenta con altos estandares de seguridad. La prioridad principal está en el contenido por lo que se implemento un espacio para que la persona con cuenta activa pueda postear publicaciones con la opción de eliminar o editar en caso sea necesario; incluso puede elegir la privacidad en modo publico o privado.
+
+* Cómo verificaste que el producto les está resolviendo sus problemas
+Como el producto está centrado en el usuario se procedio a realizar sesiones de testing y observación tambien entrevistas y feedback del proceso creativo.
+
+* Cómo te asegurarás que estos usuarios usen este producto.
+
+Como la mayor parte del tiempo utilizan sus smartphones la red social será  responsive, intuitivo y brinde las funcionalidades principales que requieren para comunicarse con sus amigos en la red social; desde la creación de un post hasta comentar y dar likes a otros que comparten información para que tengan información práctica y diaria que puedan replicar y considerar en su vida.
+
+
+## Resumen de Entrevista con usuarios
+
+![Guía de Entrevista](http://subirimagen.me/uploads/20180730084309.jpg)
+
+* Entrevista 1 .- Veronica Huallpa C., 26 años, Administradora, Practica Crossfit.
+
+  - ¿Estás interesado en tener un estilo de vida saludable? ¿Por qué?
+  *Respuesta* Si muy interesada porque me gusta tener una vida activa en beneficio para mi salud.
+
+  - ¿Con qué frecuencia utilizas redes sociales?
+  *Respuesta* Utilizo redes sociales todos los días, en todo momento siempre estoy dando un vistazo a las actualizaciones o me gusta compartir algo con mis amistades.
+
+  - ¿Cuáles son tus favoritas? ¿Por qué?
+  *Respuesta* Uso mayomente Facebook porque la mayoria de mis contactos lo utilizan y tambien me gusta Pinterest para crear tableros con temas de mi interés e Instagram estoy comenzando tambien a utilizarlo.
+
+  - ¿Qué tipo de contenido compartes o sigues respecto alimentación y salud?
+  *Respuesta* Artículos de salud, rutina de ejercicioss, postres, secuencias de crossfit, mis rutinas de entrenamiento en las mañanas.
+
+  - ¿Qué medios utilizas para buscar y compartir información respecto a tu estilo de vida? 
+  *Respuesta* En internet algunos portales con articulo interesante de alimentación, soy mienbro de un gran número de grupo en Facebook por ese medio tambien busco información o hago preguntas que otras personas  con el mismo interes responden.
+
+  - ¿Conoces alguna red social como Twitter, Facebook o Instagram que este orientado a compartir información exclusiva y confiable sobre alimentación y salud?
+  *Respuesta* Exclusivamente de alimentación y salud no conozco alguna pero seria interesante porque de está manera seria más facil contactar con personas que tengas esos intereses en común.
+
+  - ¿Te interesaría ser parte de una nueva red social exclusiva y confiable para alimentación y salud?
+  *Respuesta* Claro que si gran parte del tiempo estoy buscando información para aprender y si me gusta lo comparto.
+
+  - ¿Qué características principales consideras que debe tener?
+  *Respuesta* Permitir conocer personas con mismos intereses, organizar reuniones, compartir información y motivarnos.
+
+  - ¿Qué te motivaría seguir utilizándolo?
+  *Respuesta* Que tenga buena audiencia, compartan contenidos de alimentación recurrentes esten muy conectados y sea fácil de usar en el móvil.
+
+  - Define en dos palabras lo que te gustaría que transmita la nueva red social.
+  *Respuesta* Motivación y Vida Saludable
+
+  - ¿Qué colores elegirías para caracterizar el entorno?
+  *Respuesta* Considero que sean colores alegres y de energía: Azul y Rojo.
+
+
+* Entrevista 2 .- Karolina Lévano, 23 años, Independiente, Ver Netflix.
+
+  - ¿Estás interesado en tener un estilo de vida saludable? ¿Por qué?
+  *Respuesta* Si estoy interesada porque mi cuerpo me pide una mejor alimentación.
+
+  - ¿Con qué frecuencia utilizas redes sociales?
+  *Respuesta* Con cierta frecuencia
+
+  - ¿Cuáles son tus favoritas? ¿Por qué?
+  *Respuesta* Instagram, Facebook, Pinterest porque considero que soy muy visual.
+
+  - ¿Qué tipo de contenido compartes o sigues respecto alimentación y salud?
+  *Respuesta* Sigo youtubers vganos o que compartan su conocimiento acerca de la buena alimentación.
+
+  - ¿Qué medios utilizas para buscar y compartir información respecto a tu estilo de vida? 
+  *Respuesta* Uso Facebook e Instagram.
+
+  - ¿Conoces alguna red social como Twitter, Facebook o Instagram que este orientado a compartir información exclusiva y confiable sobre alimentación y salud?
+  *Respuesta* No conozco
+
+  - ¿Te interesaría ser parte de una nueva red social exclusiva y confiable para alimentación y salud?
+  *Respuesta* Si me gustaría porque tendría una aplicación especialmente para mi alimentación.
+
+  - ¿Qué características principales consideras que debe tener?
+  *Respuesta* Que la comida esté clasificada, poder subir recetas aprendidas, nombres de ingredientes que se adecuen a cada país.
+
+  - ¿Qué te motivaría seguir utilizándolo?
+  *Respuesta* QMe motivaria ver mucha variedad de recetas como: Postres, almuerzos, Cena, Snacks, etc. Que el diseño sea atractivo.
+
+  - Define en dos palabras lo que te gustaría que transmita la nueva red social.
+  *Respuesta* Variedad e Innovación
+
+  - ¿Qué colores elegirías para caracterizar el entorno?
+  *Respuesta* Verde, Azul, Amarillo.
 
 
 
-#### Creación de cuenta de usuario e inicio de sesión
+## Scketches de baja fidelidad
 
-* Login con Firebase:
-  - Solamente para el login es obligatorio usar [Firebase](https://firebase.google.com/), no para las
-    publicaciones en el muro ni las demás funcionalidades, para eso puedes
-    usar [`localStorage`](https://developer.mozilla.org/es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web).
-  - Autenticación con Facebook o Google.
-* Validaciones:
-  - No pueden haber usuarios repetidos.
-  - La cuenta de usuario debe ser un correo electrónico válido.
-  - Lo que se escriba en el campo (_input_) de contraseña debe ser secreto.
-* Comportamiento:
-  - Al enviarse un formulario de registro o inicio de sesión, debe validarse.
-  - En caso haya errores, el sistema debe mostrar mensajes de error para
-    ayudar al usuario a corregirlos.
-  - La aplicación solo permitirá el acceso a usuarios con cuentas válidas.
-  - Al recargar la aplicación, se debe verificar si el usuario está
-    logueado antes de mostrarle el contenido privado.
-* Perspectiva de interfaz:
+![Sketch1](http://subirimagen.me/uploads/20180729232236.jpg)
 
-  ![Login](https://user-images.githubusercontent.com/9284690/40994765-c3cf9602-68c2-11e8-89ac-8254859b5ebb.png)
+![Sketch2](http://subirimagen.me/uploads/20180729233035.jpg)
+
+
+## Link/screenshots del prototipo de alta fidelidad.
+
+A continuación presentamos nuestro prototipo de alta fidelidad [_Marvelapp_](https://marvelapp.com/5d6hf85/screen/46199554)
+
+
+## Conclusiones de Testing con prototipo de alta fidelidad y/o producto HTML
+
+Los usuarios se sintieron cómodos que la interfaz les entrege la facilidad de poder seguir utilizando su misma cuenta de Facebook o Google+ para loguearse con esta nueva aplicación; asi como un registro práctico que les permite crear una nueva cuenta.
+
+![Lista de Cotejo](http://subirimagen.me/uploads/20180730091903.jpg)
+
+
+
 
 
 ## Objetivos
