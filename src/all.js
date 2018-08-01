@@ -112,7 +112,7 @@ const getLikeOptionsAndThenShow = (currentUser, post, postWrapper) => {
           postWrapper = postWrapper
               + `<br/>`
               + `<span class="likeCounterWrapper" data-post="${post.idPost}">${post.likesCount}</span>`
-              + `<span><a class="link" onClick="addLikeToPost('${post.idPost}')"> Me gusta</a></span>`
+              + `<span><a class="link text-primary"" onClick="addLikeToPost('${post.idPost}')"> Me gusta</a></span>`
               + `</div></li>`;
       }
       //Cuando el usuario ya le dio Like al post, entonces se muestra la opción 'Ya no me gusta' 
@@ -120,7 +120,7 @@ const getLikeOptionsAndThenShow = (currentUser, post, postWrapper) => {
           postWrapper = postWrapper
               + `<br/>`
               + `<span class="likeCounterWrapper" data-post="${post.idPost}">${post.likesCount}</span>`
-              + `<span><a class="link" onClick="removeLikeFromPost('${post.idPost}')"> Ya no me gusta</a></span>`
+              + `<span><a class="link text-primary"" onClick="removeLikeFromPost('${post.idPost}')"> Ya no me gusta</a></span>`
               + `</div></li>`;
       }
       //agregar post a la lista
@@ -132,7 +132,7 @@ const getPublicPosts = (post, postWrapper) => {
     getDataBase().ref('/postLikes/' + post.idPost + '/0').once('value', (snapshot) => {
         postWrapper = postWrapper
             + `<br/>`
-            + `<span class="likeCounterWrapper" data-post="${post.idPost}">${post.likesCount}Me gusta</span>`
+            + `<span class="likeCounterWrapper text-primary"" data-post="${post.idPost}">${post.likesCount} Me gusta</span>`
             + `</div></li>`;
         $('#user-posts-lst').prepend(postWrapper);
     });
@@ -167,15 +167,18 @@ const showPostOnList = (post) => {
         $("#add-post-wrapper").show();
         let postWrapper = `<li id="${post.idPost}" data-id="${post.idPost}"  class="card-wrapper w-75 mx-auto">`
             + `<div class="post">`
-            + `<span>${post.content}</span><br/>`;
+            +
+    `    <img src="templates/userPhoto.png" class="rounded mx-auto d-block" alt="photo" width="100" height="90"> `
+            + `<span class="text-justify">${post.content}</span><br/>`;
         postWrapper = postWrapper + getOptionsForPosts(currentUser, post);
         getLikeOptionsAndThenShow(currentUser, post, postWrapper);
     }
 
     else if (!post.private){
             let postWrapper = `<li id="${post.idPost}" data-id="${post.idPost}" class="card-wrapper w-75 mx-auto">`
-            + `<div class="post">`
-            + `<span>${post.content}</span><br/>`;
+            + `<div class="post">`+
+    `    <img src="templates/userPhoto.png" class="rounded mx-auto d-block" alt="photo" width="100" height="90"> `
+            + `<span class="text-justify">${post.content}</span><br/>`;
         getPublicPosts(post, postWrapper);
 
         }
@@ -293,32 +296,7 @@ const deletePost = (userId, idPost) => {
 const editPost = (idPost) => {
     let currentUser = getLoggedUser();
 
-    alertify.genericDialog || alertify.dialog('genericDialog', function () {
-        return {
-            main: function (content) {
-                this.setContent(content);
-            },
-            setup: function () {
-                return {
-                    focus: {
-                        element: function () {
-                            return this.elements.body.querySelector(this.get('selector'));
-                        },
-                        select: true
-                    },
-                    options: {
-                        basic: true,
-                        maximizable: false,
-                        resizable: false,
-                        padding: false
-                    }
-                };
-            },
-            settings: {
-                selector: undefined
-            }
-        };
-    });
+
 
     let callbackEdit = (snapshot) => {
         let post = snapshot.val();
@@ -411,6 +389,7 @@ $('#add-form-post').submit((e) => {
     e.preventDefault();
     try {
         let post = getPost();
+        clearElement(getID("postTextArea"));
         post = addNewPost(post);
     } catch (error) {
         console.log(error);

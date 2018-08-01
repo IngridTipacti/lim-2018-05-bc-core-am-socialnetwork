@@ -36,7 +36,7 @@
       </div>
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -46,11 +46,6 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a id="wallHome" class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a id="userProfile" class="nav-link" href="#">User
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -88,13 +83,13 @@
               <form id="form-login">
                 <div class="form-group">
                   <label for="mail-access">Correo</label>
-                  <input class='validate form-control' type='email' name='email' id='mail-access' />
+                  <input class='validate form-control' type='email' name='email' id='mail-access' required/>
 
                   <label for="password-access">Contraseña</label>
-                  <input class='validate form-control' type='password' name='password' id='password-access' />
+                  <input class='validate form-control' type='password' name='password' id='password-access' required/>
                 </div>
                 <div class="form-group">
-                <input type="submit" id="btn-login" class="btn btn-block" value="Ingresar">
+                  <input type="submit" id="btn-login" class="btn btn-block" value="Ingresar">
                 </div>
                 <div class="form-group ">
                   <a href="#" class="fb" id="btn-login-facebook">
@@ -107,7 +102,6 @@
                 </div>
 
 
-
                 <div id="container-text"></div>
               </form>
             </div>
@@ -118,16 +112,15 @@
               <form id="form-signup">
                 <div class="form-group">
                   <label for="emailR">Correo</label>
-                  <input id="emailR" class='form-control' type="email" name="username" placeholder="Correo" required>
+                  <input id="emailR" class='form-control' type="email" name="username" required>
                 </div>
                 <div class="form-group">
                   <label for="passwordR">Contraseña</label>
-                  <input id="passwordR" class='form-control' type="password" name="password" placeholder="contraseña" required pattern=".{8,}">
+                  <input id="passwordR" class='form-control' type="password" name="password" required pattern=".{8,}">
                 </div>
                 <div class="form-group">
-                    <label for="confirm-password">Contraseña</label>
-                  <input id="confirm-password" class='form-control' type="password" name="confirm-password" placeholder="confirma contraseña"
-                    required />
+                  <label for="confirm-password">Confirmar contraseña</label>
+                  <input id="confirm-password" class='form-control' type="password" name="confirm-password" required />
                 </div>
                 <p id="password-requirements">Requisitos mínimos de Contraseña:</p>
                 <ul>
@@ -165,7 +158,7 @@
           </div>
 
         </div>
-  </div>
+      </div>
 
 
 
@@ -191,7 +184,7 @@
       </div>
 
 
-      </div>
+    </div>
 
     <div style="display: none">
       <form id="form-edit-post" class="card w-100">
@@ -200,6 +193,7 @@
 
           <input type="hidden" name="idPost" />
           <textarea name="postContent" required></textarea>
+          <textarea id="editPost" required></textarea>
           <input type="checkbox" name="privatePost" value="private" />Privado
           <br/>
           <button type="submit" id="btn-edit-post">Editar</button>

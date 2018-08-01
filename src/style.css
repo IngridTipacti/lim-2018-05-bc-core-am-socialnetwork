@@ -106,9 +106,5 @@ ul {
   padding: 20px 30px 40px 30px;
 }
 .link{
-  color: #3B5998;
   cursor: pointer;
-}
-.btn .btn-secondary .dropdown-toggle{
-  float: right;    
 }
