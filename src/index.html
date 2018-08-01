@@ -17,53 +17,62 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css" />
   <!-- Default theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/default.min.css" />
-  <link rel="stylesheet" href="../icomoon/style.css">
+  <link rel="stylesheet" href="../src/icomoon/style.css">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <span class="navbar-brand mb-0 h1">Vitality</span>
-    <div class="btn-group float right">
-      <a class="btn btn-outline-secondary" id="btn1" href="#" data-toggle="modal" data-target="#modalLogin">Ingresar</a>
-      <a class="btn btn-outline-secondary" id="btn2" href="#" data-toggle="modal" data-target="#modalLogin ">Registrar</a>
-      <div id="photo"></div>
-      <a href="#" id="logout-lnk" class="btn btn-dark">Cerrar Sesión</a>
-    </div>
-  </nav>
+  <header>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
+    <nav class="navbar navbar-default" role="navigation">
+      <span class="navbar-brand mb-0 h1">
+        <img src="templates/Vitality.png" height="100" width="auto">
+      </span>
+      <div class="btn-group float right">
+        <a class="btn btn-outline-secondary" id="btn1" href="#" data-toggle="modal" data-target="#modalLogin">Ingresar</a>
+        <a class="btn btn-outline-secondary" id="btn2" href="#" data-toggle="modal" data-target="#modalLogin ">Registrar</a>
+        <div id="photo"></div>
+        <a href="#" id="logout-lnk" class="btn btn-dark">Cerrar Sesión</a>
+      </div>
+    </nav>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse " id="navbarSupportedContent" style="float:right">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a id="wallHome" class="nav-link" href="#">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a id="userProfile" class="nav-link" href="#">User
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent" style="float:right">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a id="wallHome" class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a id="userProfile" class="nav-link" href="#">User
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
 
   <div class="modal" tabindex="-1" role="dialog" id="modalLogin">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Vita Life</h5>
+          <h5 class="modal-title">
+            <img src="templates/Vitality.png" height="60" width="auto">
+          </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
+
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ingresar</a>
@@ -76,7 +85,7 @@
           <div class="tab-content" id="myTabContent">
 
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <form id="form-signin">
+              <form id="form-login">
                 <div class="form-group">
                   <label for="mail-access">Correo</label>
                   <input class='validate form-control' type='email' name='email' id='mail-access' />
@@ -84,18 +93,19 @@
                   <label for="password-access">Contraseña</label>
                   <input class='validate form-control' type='password' name='password' id='password-access' />
                 </div>
-
                 <div class="form-group">
+                <input type="submit" id="btn-login" class="btn btn-block" value="Ingresar">
+                </div>
+                <div class="form-group ">
                   <a href="#" class="fb" id="btn-login-facebook">
                     <i class="fa fa-facebook fa-fw"></i> Facebook
                   </a>
-                </div>
-                <div class="form-group">
+
                   <a href="#" class="google" id="btn-login-google">
                     <i class="fa fa-google fa-fw"></i> Google+
                   </a>
                 </div>
-                <input type="submit" id="btn-login" class="btn" value="LOGIN">
+
 
 
                 <div id="container-text"></div>
@@ -107,24 +117,24 @@
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
               <form id="form-signup">
                 <div class="form-group">
-                  <input id="emailR" class='form-control' type="email" name="username" placeholder="email" required>
+                  <label for="emailR">Correo</label>
+                  <input id="emailR" class='form-control' type="email" name="username" placeholder="Correo" required>
                 </div>
                 <div class="form-group">
-                  <input id="passwordR" class='form-control' type="password" name="password" placeholder="password" required pattern=".{8,}">
+                  <label for="passwordR">Contraseña</label>
+                  <input id="passwordR" class='form-control' type="password" name="password" placeholder="contraseña" required pattern=".{8,}">
                 </div>
                 <div class="form-group">
-                  <input id="confirm-password" class='form-control' type="password" name="confirm-password" placeholder="confirm password"
+                    <label for="confirm-password">Contraseña</label>
+                  <input id="confirm-password" class='form-control' type="password" name="confirm-password" placeholder="confirma contraseña"
                     required />
                 </div>
                 <p id="password-requirements">Requisitos mínimos de Contraseña:</p>
                 <ul>
                   <li id="mayus">Mínimo 1 mayúscula</li>
-                  <li id="special">Mínimo 1 caracter especial</li>
-                  <li id="number">Mínimo 1 número</li>
-                  <li id="lower">Mínimo 1 minúscula</li>
                   <li id="len">Mínimo 8 caracteres</li>
                 </ul>
-                <input type="submit" id="btn-signup" class="btn" value="Regístrate">
+                <input type="submit" id="btn-signup" class="btn btn-block" value="Regístrate">
               </form>
             </div>
 
@@ -137,62 +147,89 @@
     </div>
   </div>
 
-  <div id="posts" class="wrapper">
+  <div id="main">
 
+    <div class="container">
+      <div id="slider-home" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#slider-home" data-slide-to="0" class="active"></li>
+          <li data-target="#slider-home" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img src="templates/slide1.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img src="templates/slide2.jpg" alt="Second slide">
 
-    <div class="card w-100" id="add-post-wrapper">
-      <div id="container-post" class="card-body">
+          </div>
 
-        <form id="add-form-post">
-
-          <label for="postTextArea">Publicación</label>
-          <textarea class="form-control" name="postContent" id="postTextArea" rows="5" placeholder="¿Qué deseas publicar?"></textarea>
-          <input type="checkbox" name="privatePost" value="private" />Privado
-          <button class="btn btn-primary" id="btn-add-post">Publicar</button>
-
+        </div>
   </div>
 
-        </form>
+
+
+
+      <div id="posts" class="wrapper">
+
+
+        <div class="card w-100" id="add-post-wrapper">
+          <div id="container-post" class="card-body">
+
+            <form id="add-form-post">
+
+              <label for="postTextArea">Publicación</label>
+              <textarea class="form-control" name="postContent" id="postTextArea" rows="5" placeholder="¿Qué deseas publicar?"></textarea>
+              <input type="checkbox" name="privatePost" value="private" />Privado
+              <button class="btn btn-primary" id="btn-add-post">Publicar</button>
+
+          </div>
+
+          </form>
+
+        </div>
+      </div>
+
 
       </div>
+
+    <div style="display: none">
+      <form id="form-edit-post" class="card w-100">
+        <fieldset>
+
+
+          <input type="hidden" name="idPost" />
+          <textarea name="postContent" required></textarea>
+          <input type="checkbox" name="privatePost" value="private" />Privado
+          <br/>
+          <button type="submit" id="btn-edit-post">Editar</button>
+        </fieldset>
+      </form>
     </div>
 
-  </div>
-
-  <div style="display: none">
-    <form id="form-edit-post" class="card w-100">
-      <fieldset>
-
-        <input type="hidden" name="idPost" />
-        <textarea name="postContent" required></textarea>
-        <input type="checkbox" name="privatePost" value="private" />Privado
-        <br/>
-        <button type="submit" id="btn-edit-post">Editar</button>
-      </fieldset>
-    </form>
-  </div>
-
-  <div id="my-posts-wrappers">
-
-    <br>
-    <ul id="user-posts-lst">
-    </ul>
-  </div>
 
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script src="all.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/userData.js"></script>
-  <script src="../js/wallLogin.js"></script>
+
+    <div id="my-posts-wrappers">
+
+      <br>
+      <ul id="user-posts-lst">
+      </ul>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+      crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="all.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wallLogin.js"></script>
 </body>
 
 </html>

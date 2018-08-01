@@ -1,34 +1,42 @@
-.check{
+.check {
   background-color: green;
 }
-#publicar{
+
+#publicar {
   background-image: url(https://previews.123rf.com/images/coffeemate/coffeemate1301/coffeemate130100056/17438663-pencil-cartoon-a-children-s-sketch.jpg);
-    background-size: auto;
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    left: 0;
-    position: absolute;
-    top: -1px;
-    vertical-align: middle;
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  left: 0;
+  position: absolute;
+  top: -1px;
+  vertical-align: middle;
 }
+
+/* Carousel */
+#slider-home {
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.carousel-item img {
+  width: 100%;
+}
+
 textarea {
   max-width: 100%;
 }
 
-#container-post{
+#container-post {
   padding-top: 50px;
 }
 
-#btn-post{
+#btn-post {
   width: 100px;
 }
-.photo_user_name{
-  display: block;
-  
-}
-#photo{
+
+#photo {
   border-radius: 50%;
   bottom: 0;
   left: 0;
@@ -40,21 +48,21 @@ textarea {
   margin: 0;
 }
 
-#user_name{
-    max-width: 100px;
-    position: relative;
-    bottom: 1;
-    right: 1;
-    display: block;
-    margin-left: 30px;
-    max-width: 126px;
-    overflow: hidden;
-    padding-left: 30px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+#user_name {
+  max-width: 100px;
+  position: relative;
+  bottom: 1;
+  right: 1;
+  display: block;
+  margin-left: 30px;
+  max-width: 126px;
+  overflow: hidden;
+  padding-left: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-#post{
+#post {
   background-color: transparent;
   box-sizing: border-box;
   display: block;
@@ -65,11 +73,11 @@ textarea {
   padding: 23px 12px 14px;
 }
 
-#sign-off{
-  display:none;
+#sign-off {
+  display: none;
 }
 
-ul{
+ul {
   list-style: none;
   padding: 0%;
 }
@@ -89,3 +97,18 @@ ul{
 /* #logout-lnk{
   display: none;
 } */
+
+.card-wrapper {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 5px #777;
+  margin: 20px 0;
+  padding: 20px 30px 40px 30px;
+}
+.link{
+  color: #3B5998;
+  cursor: pointer;
+}
+.btn .btn-secondary .dropdown-toggle{
+  float: right;    
+}
