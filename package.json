@@ -1,10 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "c",
-  "version": "1.0.0",
-  "description": "^C",
-  "main": "index.js",
-=======
   "name": "lim-2018-05-bc-core-am-socialnetwork",
   "version": "1.0.0",
   "description": "Creando package.json",
@@ -12,7 +6,6 @@
   "directories": {
     "test": "test"
   },
->>>>>>> 51dbe676906660fcd7b02f14c0dfe9e7d0503aef
   "dependencies": {
     "firebase": "^5.3.0",
     "firebase-functions-test": "^0.1.3",
