@@ -90,9 +90,9 @@ $('#form-signup').submit(registrar = (e) => {
 
 
 //Validar formulario de login
-const validateLogin = () => {
+window.validateLogin = () => {
   expresionLogin = /\w+@\w+\.+[a-z]/;
-  expresionPassword = /\w+?=.{8,}/;
+  expresionPassword = /^(?=.*[A-Z])([a-zA-Z0-9_-]){8,}$/;
   let accessMail = getID('mail-access').value;
   let accessPassword = getID('password-access').value;
   //Arreglos

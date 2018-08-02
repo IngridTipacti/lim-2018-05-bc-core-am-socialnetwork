@@ -98,8 +98,8 @@ const getOptionsForPosts = (currentUser, post) => {
             •
           </button>` +
             `<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <a href="#" class="dropdown-item" onClick="editPost('${post.idPost}')" data-post="${post.idPost}">Editar</a>
-          <a href="#" class="dropdown-item" onClick="removePost('${post.idPost}')" data-post="${post.idPost}">Eliminar</a></div>`;
+           <a  class="dropdown-item" onClick="editPost('${post.idPost}')" data-post="${post.idPost}">Editar</a>
+          <a class="dropdown-item" onClick="removePost('${post.idPost}')" data-post="${post.idPost}">Eliminar</a></div>`;
     }
     return options;
 }
@@ -170,6 +170,7 @@ const showPostOnList = (post) => {
             +
     `    <img src="templates/userPhoto.png" class="rounded mx-auto d-block" alt="photo" width="100" height="90"> `
             + `<span class="text-justify">${post.content}</span><br/>`;
+            //`<textarea disabled id="post-edit" class="text-justify">${post.content}</textarea><br/>`;
         postWrapper = postWrapper + getOptionsForPosts(currentUser, post);
         getLikeOptionsAndThenShow(currentUser, post, postWrapper);
     }
@@ -179,6 +180,7 @@ const showPostOnList = (post) => {
             + `<div class="post">`+
     `    <img src="templates/userPhoto.png" class="rounded mx-auto d-block" alt="photo" width="100" height="90"> `
             + `<span class="text-justify">${post.content}</span><br/>`;
+            //`<textarea class="text-justify">${post.content}</textarea><br/>`;
         getPublicPosts(post, postWrapper);
 
         }
@@ -274,6 +276,7 @@ const updatePost = (post) => {
     updates['/user-posts/' + post.userId + '/' + post.idPost + '/editedOn'] = updateDatetime;
 
     getDataBase().ref().update(updates).then(() => {
+        
         //
         alertify.success('Se ha actualizado el post');
         //show post again
@@ -296,15 +299,17 @@ const deletePost = (userId, idPost) => {
 const editPost = (idPost) => {
     let currentUser = getLoggedUser();
 
-
-
     let callbackEdit = (snapshot) => {
         let post = snapshot.val();
         let $editForm = $('#form-edit-post');
         $editForm.find('textarea[name="postContent"]').val(post.content);
         $editForm.find('input[name="idPost"]').val(post.idPost);
-        $editForm.find('input[name="privatePost"]').prop('checked', post.private)
-        alertify.genericDialog($editForm[0]).set('selector', 'textarea[name="postContent"]');
+        $editForm.find('input[name="privatePost"]').prop('checked', post.private);
+
+        let $postLi = $('#'+post.idPost);
+        $('#'+post.idPost + ' .post').hide();
+        $postLi.html($editForm);
+        $('#postLi').html('')
     }
 
     getPostByUserAndId(currentUser.uid, idPost, callbackEdit);
@@ -314,7 +319,6 @@ const removePost = (idPost) => {
 
     let question = document.createElement('span');
     question.innerHTML = '¿Seguro que desea eliminar el Post?';
-
     //show confirm diaglo
     alertify.confirm(question,
         //if YES
@@ -378,7 +382,7 @@ const listPosts = () => {
     $('#user-posts-lst').html('<p>Cargando posts...</p>');
     let callback = (snapshot) => {
         $('#user-posts-lst').html('');
-        snapshot.forEach(function (child) {
+        snapshot.forEach( (child) => {
             showPostOnList(child.val());
         })
     };
@@ -392,7 +396,6 @@ $('#add-form-post').submit((e) => {
         clearElement(getID("postTextArea"));
         post = addNewPost(post);
     } catch (error) {
-        console.log(error);
         alert(error.message);
     }
 
@@ -403,7 +406,6 @@ $('#form-edit-post').submit((e) => {
     try {
         let post = getPostToEdit();
         updatePost(post);
-        alertify.closeAll();
     } catch (error) {
         alert(error.message);
     }
