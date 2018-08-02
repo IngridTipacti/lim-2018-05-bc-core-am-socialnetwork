@@ -98,8 +98,8 @@ const getOptionsForPosts = (currentUser, post) => {
             •
           </button>` +
             `<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <a href="javascript:void()" class="dropdown-item" onClick="editPost('${post.idPost}')" data-post="${post.idPost}">Editar</a>
-          <a href="javascript:void()" class="dropdown-item" onClick="removePost('${post.idPost}')" data-post="${post.idPost}">Eliminar</a></div>`;
+           <a  class="dropdown-item" onClick="editPost('${post.idPost}')" data-post="${post.idPost}">Editar</a>
+          <a class="dropdown-item" onClick="removePost('${post.idPost}')" data-post="${post.idPost}">Eliminar</a></div>`;
     }
     return options;
 }

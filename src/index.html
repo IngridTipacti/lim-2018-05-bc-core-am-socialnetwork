@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +18,7 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/default.min.css" />
   <link rel="stylesheet" href="icomoon/style.css">
 </head>
+
 <body>
   <header>
       <nav class="navbar navbar-default" role="navigation">
@@ -116,6 +118,7 @@
       </div>
     </div>
   </div>
+
   <div id="main">
     <div class="container">
       <div id="slider-home" class="carousel slide" data-ride="carousel">
@@ -138,41 +141,45 @@
             <form id="add-form-post">
               <label for="postTextArea">Publicación</label>
               <textarea class="form-control" name="postContent" id="postTextArea" rows="5" placeholder="¿Qué deseas publicar?"></textarea>
-              <input type="checkbox" name="privatePost" value="private" />Privado
-              <button class="btn btn-primary" id="btn-add-post">Publicar</button>
+              <input type="checkbox" name="privatePost" value="private" class="float-left" />Privado
+              <button class="btn btn-primary float-right" id="btn-add-post">Publicar</button>
           </div>
           </form>
         </div>
       </div>
     </div>
-    <div style="display: none">
-      <form id="form-edit-post" class="card w-100">
-        <fieldset>
-          <input type="hidden" name="idPost" />
-          <textarea name="postContent" required></textarea>
-          <input type="checkbox" name="privatePost" value="private" />Privado
-          <br/>
-          <button type="submit" id="btn-edit-post">Actualizar</button>
-        </fieldset>
-      </form>
-    </div>
-    <div id="my-posts-wrappers">
-      <br>
-      <ul id="user-posts-lst">
-      </ul>
-    </div>
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-      crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script src="all.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wallLogin.js"></script>
+  </div>
+
+  <div style="display: none">
+    <form id="form-edit-post" class="card w-100">
+      <fieldset>
+        <input type="hidden" name="idPost" />
+        <textarea name="postContent" class="form-control form-control-lg" rows="3" required></textarea>
+        <input type="checkbox" name="privatePost" value="private" class = "float-left"/>Privado
+        <br/>
+        <button type="submit" id="btn-edit-post">Actualizar</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="my-posts-wrappers">
+    <br>
+    <ul id="user-posts-lst">
+    </ul>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="all.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/wallLogin.js"></script>
 </body>
+
 </html>
