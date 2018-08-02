@@ -1,8 +1,6 @@
 <!doctype html>
 <html>
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vitality</title>
@@ -19,9 +17,7 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/default.min.css" />
   <link rel="stylesheet" href="icomoon/style.css">
 </head>
-
 <body>
-
   <header>
     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
     <nav class="navbar navbar-default" role="navigation">
@@ -31,17 +27,15 @@
       <div class="btn-group float right">
         <a class="btn btn-outline-secondary" id="btn1" href="#" data-toggle="modal" data-target="#modalLogin">Ingresar</a>
         <a class="btn btn-outline-secondary" id="btn2" href="#" data-toggle="modal" data-target="#modalLogin ">Registrar</a>
-        <div id="photo"></div>
+        <!--<div id="photo"></div>-->
         <a href="#" id="logout-lnk" class="btn btn-dark">Cerrar Sesión</a>
       </div>
     </nav>
-
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse " id="navbarSupportedContent" style="float:right">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -53,8 +47,6 @@
       </div>
     </nav>
   </header>
-
-
   <div class="modal" tabindex="-1" role="dialog" id="modalLogin">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -67,7 +59,6 @@
           </button>
         </div>
         <div class="modal-body">
-
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ingresar</a>
@@ -75,16 +66,13 @@
             <li class="nav-item">
               <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registrar</a>
             </li>
-
           </ul>
           <div class="tab-content" id="myTabContent">
-
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <form id="form-login">
                 <div class="form-group">
                   <label for="mail-access">Correo</label>
                   <input class='validate form-control' type='email' name='email' id='mail-access' required/>
-
                   <label for="password-access">Contraseña</label>
                   <input class='validate form-control' type='password' name='password' id='password-access' required/>
                 </div>
@@ -95,19 +83,13 @@
                   <a href="#" class="fb" id="btn-login-facebook">
                     <i class="fa fa-facebook fa-fw"></i> Facebook
                   </a>
-
                   <a href="#" class="google" id="btn-login-google">
                     <i class="fa fa-google fa-fw"></i> Google+
                   </a>
                 </div>
-
-
                 <div id="container-text"></div>
               </form>
             </div>
-
-
-
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
               <form id="form-signup">
                 <div class="form-group">
@@ -130,18 +112,12 @@
                 <input type="submit" id="btn-signup" class="btn btn-block" value="Regístrate">
               </form>
             </div>
-
-
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
-
   <div id="main">
-
     <div class="container">
       <div id="slider-home" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -154,64 +130,39 @@
           </div>
           <div class="carousel-item">
             <img src="templates/slide2.jpg" alt="Second slide">
-
           </div>
-
         </div>
       </div>
-
-
-
-
       <div id="posts" class="wrapper">
-
-
         <div class="card w-100" id="add-post-wrapper">
           <div id="container-post" class="card-body">
-
             <form id="add-form-post">
-
               <label for="postTextArea">Publicación</label>
               <textarea class="form-control" name="postContent" id="postTextArea" rows="5" placeholder="¿Qué deseas publicar?"></textarea>
               <input type="checkbox" name="privatePost" value="private" />Privado
               <button class="btn btn-primary" id="btn-add-post">Publicar</button>
-
           </div>
-
           </form>
-
         </div>
       </div>
-
-
     </div>
-
     <div style="display: none">
       <form id="form-edit-post" class="card w-100">
         <fieldset>
-
-
           <input type="hidden" name="idPost" />
           <textarea name="postContent" required></textarea>
-          <textarea id="editPost" required></textarea>
           <input type="checkbox" name="privatePost" value="private" />Privado
           <br/>
-          <button type="submit" id="btn-edit-post">Editar</button>
+          <button type="submit" id="btn-edit-post">Actualizar</button>
         </fieldset>
       </form>
     </div>
-
-
-
-
     <div id="my-posts-wrappers">
-
       <br>
       <ul id="user-posts-lst">
       </ul>
     </div>
-
-
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -225,5 +176,4 @@
     <script src="js/main.js"></script>
     <script src="js/wallLogin.js"></script>
 </body>
-
 </html>
